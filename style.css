@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#heart {
+    width: 700px;
+    height: 700px;
+    background-image: url(images/3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: 2s;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/backLove.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 400px;
+    border: 5px outset rgb(252, 1, 1);
+    box-shadow: 0px 0px 50px 10px rgba(255, 0, 0, 0.5);
+    background-color: rgb(244, 171, 200);
+    z-index: 5;
+}
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    padding: 5px 0;
+    text-align: center;
+    width: 70%;
+    outline: 1px ridge crimson; border-radius: 2rem;
+    font-size: 16px;
+}
+
+.send-form, label, button {
+    width: 100%;
+}
+
+.send-form, button {
+    padding: 5px 0;
+    font-weight: bold;
+    border-radius: 2rem;
+    border: 1px dotted black;
+    background-color: crimson;
+    color: white;
+}
+
+.send-form:hover, button:hover {
+    background-color: darkred;
+    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+#bgModal {
+    background: #000;
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	opacity: 0.9;
+	z-index: 10;
+    transition: 1s;
+}
+
+#modal {
+    background-color: rgb(244, 171, 200);
+    padding: 20px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    transition: 1s;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+p {
+    text-align: center;
+}
+
+@media screen and (max-width: 700px){
+    #heart {
+        width: 100%;
+
+    }
+
+    .form-container {
+        width: 300px;
+    }
+
+    #modal {
+        width: 90%;
+    }
+}
